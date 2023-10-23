@@ -2,11 +2,11 @@
 
 ## Overview
 
-This repository contains the solution to the recursion assignment as part of The Odin Project curriculum. The goal of this assignment is to assess your knowledge of recursion and your ability to implement a recursive algorithm to sort an array using the Merge Sort algorithm.
+This repository contains the solution to the recursion assignment as part of The Odin Project curriculum. The goal of this assignment is to assess my knowledge of recursion and my ability to implement a recursive algorithm to sort an array using the Merge Sort algorithm.
 
 ## Assignment Description
 
-The assignment requires you to create a function that takes a single array as input and sorts it using the Merge Sort algorithm. Merge Sort is a divide-and-conquer sorting algorithm that recursively divides the input array into smaller sub-arrays, sorts them, and then combines them to produce a sorted output.
+The assignment requires I create a function that takes a single array as input and sorts it using the Merge Sort algorithm. Merge Sort is a divide-and-conquer sorting algorithm that recursively divides the input array into smaller sub-arrays, sorts them, and then combines them to produce a sorted output.
 
 ## Project Structure
 
