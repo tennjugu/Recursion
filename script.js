@@ -1,26 +1,42 @@
 function mergeSort(arr){
-    const b = arr.length
-    let midLength
-    if (b <= 1){
-        console.log(arr)
-        return 
+    if (arr.length <= 1){
+        //console.log(arr)
+        return arr
     }
-    if(b > 1){
-            midLength = b / 2
-            const leftSide = arr.slice(0, midLength)
-            const rightSide = arr.slice(midLength, b)
-            mergeSort(leftSide)
-            mergeSort(rightSide)
-            return
-        // if (b % 2 != 0 ){
-        //     mid = (b - 1) / 2
-        //     console.log(arr[mid])
-        //     console.log(arr.slice(0, mid))
-        //     return
-        // }
+    if(arr.length > 1){
+        let midLength = arr.length / 2
+        let leftSide = arr.slice(0, midLength)
+        //console.log(leftSide)
+        let rightSide = arr.slice(midLength, arr.length)
+        //console.log(rightSide)
+        let leftList = mergeSort (leftSide)
+        let rightList =  mergeSort(rightSide) 
+        return mergeSortedList(leftList, rightList)
     }
+    
 }
 
+function mergeSortedList(A, B) {
+    let sortedList = []
+    let i = 0
+    let j = 0
+    while(i < A.length && j < B.length){
+        if (A[i] < B[j]){
+            sortedList.push(A[i])
+            i++
+        }else{
+            sortedList.push(B[j])
+            j++
+        }
+    }
+    for (;i < A.length; i++){
+        sortedList.push(A[i])
+    }
+    for (;j < B.length; j++){
+        sortedList.push(B[j])
+    }
+    return sortedList
+}
 
-arr = [5, 2, 9, 1, 5, 6, 8]
-mergeSort(arr)
+// arr = [5, 2, 9, 1, 5, 6, 8, 3, 7]
+// console.log(mergeSort(arr))
